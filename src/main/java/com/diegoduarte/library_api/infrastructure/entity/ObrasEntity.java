@@ -21,6 +21,9 @@ public class ObrasEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "autorEmail")
+    private String autorEmail;
+
     @Column(name = "nome", nullable = false)
     private String nome;
 
