@@ -20,6 +20,6 @@ public class ObrasDTO {
     private String descricao;
     private LocalDate dataPublicacao;
     private LocalDate dataExposicao;
-    private List<AutoresEntity> autores;
+    private List<String> autoresEmails;
 }
 
