@@ -29,7 +29,6 @@ public class LibraryConverter {
     public static AutoresDTO paraAutorDTO(AutoresEntity entity) {
 
         if (entity == null) return null;
-
         return AutoresDTO.builder()
                 .id(entity.getId())
                 .nome(entity.getNome())
