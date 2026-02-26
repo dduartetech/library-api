@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(ConflictException.class)
     public ResponseEntity<String> handleConflictException(ConflictException ex) {
         String mensagem = (ex.getMessage() != null) ? ex.getMessage() : "Erro interno na operação";
         return new ResponseEntity<>(mensagem, HttpStatus.CONFLICT);
     }
-    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleResourceNotFoundException(ResourceNotFoundException ex) {
         String mensagem = (ex.getMessage() != null) ? ex.getMessage() : "Erro interno na operação";
         return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
